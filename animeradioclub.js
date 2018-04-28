@@ -72,18 +72,6 @@ client.on("message", message => {
             });
         }
 
-        if (command === "restart") {
-            if (message.author.id === config.owner) {
-                message.channel.send(":wave: Rebooting!")
-                setTimeout(function() {
-                    process.exit(1);
-                }, 3 * 1000)
-            }
-            else {
-                message.channel.send("I'm sorry, only the bot creator can use this command!")
-            }
-        }
-
         if (command === "setprefix") {
             if (message.author.id === config.owner) {
                 const newPrefix = args[1];
