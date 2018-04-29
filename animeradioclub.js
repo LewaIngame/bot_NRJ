@@ -144,7 +144,7 @@ client.on("message", message => {
 
                 message.channel.sendEmbed(embed);
                 message.member.voiceChannel.join().then(connection => {
-                    require('http').get("http://185.52.127.168/fr/40013/aac_64.mp3", (res) => {
+                    require('http').get("http://185.52.127.155/fr/30001/mp3_128.mp3?origine=fluxradios", (res) => {
                         connection.playStream(res);
                     })
                 })
